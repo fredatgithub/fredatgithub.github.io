@@ -1,5 +1,0 @@
-language: csharp
-solution: FunctionsUseful.Fred.Csharp.sln
-notifications:
-  email: false
-  
