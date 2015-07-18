@@ -12,9 +12,9 @@
 #platform: Any CPU
  
 # to add several platforms to build matrix:
-platform:
+#platform:
 #  - x86
-  - Any CPU
+#  - Any CPU
 #  - x64
  
 # build Configuration, i.e. Debug, Release, etc.
@@ -33,11 +33,11 @@ platform:
   #- ps: Write-Host 'This is PowerShell'
   # ps: Set-Culture fr-FR
 
-build:
+#build:
   # MSBuild verbosity level
   #verbosity: quiet|minimal|normal|detailed
-  verbosity: minimal
-  parallel: true  
+  #verbosity: minimal
+  #parallel: true  
 
 # scripts to run before build
 #before_build:
