@@ -77,6 +77,7 @@
     <Content Include="images\stackoverflow-logo.png" />
     <Content Include="images\sunet-beach-airbrush.jpg" />
     <Content Include="images\the_code_project.png" />
+    <Content Include="images\w3school.jpg" />
     <Content Include="index.html" />
     <Content Include="scripts\jquery-1.11.3.js" />
     <Content Include="scripts\jquery-1.11.3.min.js" />
