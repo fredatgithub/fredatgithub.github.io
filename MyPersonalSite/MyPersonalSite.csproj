@@ -66,10 +66,17 @@
     <Content Include="images\california_sunset.jpg" />
     <Content Include="images\chinese_chess.png" />
     <Content Include="images\clean_black_road_in_snowed_winter_1920x1440.jpg" />
+    <Content Include="images\codeplex.png" />
+    <Content Include="images\github.jpg" />
     <Content Include="images\light_wool.png" />
     <Content Include="images\light_wool__2x.png" />
     <Content Include="images\matrix-1920x1080.jpg" />
+    <Content Include="images\msdn.jpg" />
+    <Content Include="images\nuget.jpg" />
+    <Content Include="images\nuget_wordle.jpg" />
+    <Content Include="images\stackoverflow-logo.png" />
     <Content Include="images\sunet-beach-airbrush.jpg" />
+    <Content Include="images\the_code_project.png" />
     <Content Include="index.html" />
     <Content Include="scripts\jquery-1.11.3.js" />
     <Content Include="scripts\jquery-1.11.3.min.js" />
