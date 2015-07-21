@@ -58,7 +58,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\WordCount.css" />
+    <Content Include="images\blue_sea_and boat.jpg" />
+    <Content Include="images\boat_in_deep_sea.jpg" />
+    <Content Include="images\california_sunset.jpg" />
+    <Content Include="images\chinese_chess.png" />
+    <Content Include="images\clean_black_road_in_snowed_winter_1920x1440.jpg" />
+    <Content Include="images\light_wool.png" />
+    <Content Include="images\light_wool__2x.png" />
+    <Content Include="images\matrix-1920x1080.jpg" />
+    <Content Include="images\sunet-beach-airbrush.jpg" />
     <Content Include="index.html" />
+    <Content Include="scripts\jquery-1.11.3.js" />
+    <Content Include="scripts\jquery-1.11.3.min.js" />
+    <Content Include="scripts\jquery-2.1.4.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +88,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
