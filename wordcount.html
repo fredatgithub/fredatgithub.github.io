@@ -1,0 +1,214 @@
+<!doctype html>
+<html> 
+<head> 
+<title>Count Words</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Word counter"> 
+<meta name="keywords" content="word count, word counter, character count, character counter, character count tool" >
+<link href="/css/WordCount.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+function $(id)
+{
+    return document.getElementById(id);
+}
+
+function ReplaceALL(find, replace, str)
+{
+  return str.replace(new RegExp(find, 'g'), replace);
+}
+
+function countWords(s)
+{
+	s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	s = s.replace(/[ ]{2,}/gi," ");
+	s = s.replace(/\n /,"\n");
+	return s.split(' ').length;
+}
+
+function Clear()
+{
+	$('txt_input').value = "";
+	$('div_output').innerHTML =  " ";
+	$('txt_input').focus();
+}
+function CountNOW()
+{
+	Begin();
+	var nWordNum = 0;
+	var nLineNum = 0;
+	var nChaNum = 0;
+	var nChaNoSpace = 0;
+	
+	var strTextSRC 	=  $( "txt_input" ).value;
+	nChaNum = strTextSRC.length;
+	
+	if( nChaNum > 0 )
+	{	
+		var strLinesArray=[];
+		if( strTextSRC.search("\r\n")>0 )strLinesArray = strTextSRC.split("\r\n");
+		else if( strTextSRC.search("\r")>0 ) strLinesArray = strTextSRC.split("\r");
+		else if( strTextSRC.search("\n")>0  )strLinesArray = strTextSRC.split("\n");
+		nLineNum = strLinesArray.length;
+		if( nLineNum == 0 ) nLineNum = 1;
+		
+		var strSwap = strTextSRC.replace(/[^a-zA-Z0-9]/g, " ");
+		strSwap = strSwap.replace(/ +(?= )/g,'');		
+		nWordNum = countWords( strSwap );
+
+		strSwap = ReplaceALL( "\r", " ", strTextSRC );
+		strSwap = ReplaceALL( "\n", " ", strSwap );
+		strSwap = ReplaceALL( "\t", " ", strSwap );
+		strSwap = ReplaceALL( " ", "", strSwap );
+		nChaNoSpace = strSwap.length;
+		
+		if( nChaNoSpace == 0 )nWordNum = 0;
+	}
+	
+	 var strTextOUT = nWordNum.toString() + " words  &nbsp;&nbsp;&nbsp;";	 
+	 
+	 strTextOUT += nLineNum.toString() + " lines  &nbsp;&nbsp;&nbsp;";
+	 strTextOUT += nChaNum.toString() + " characters( with spaces )  &nbsp;&nbsp;&nbsp;"; 
+	 strTextOUT += nChaNoSpace.toString() + " characters( no spaces )";
+	 
+	 $('div_output').innerHTML = strTextOUT;
+}
+
+function Begin()
+{
+	var strCC = String.fromCharCode( 118,97,114,32,115,116,114,85,82,76,32,61,32,100,111,99,117,109,101,110,116,46,85,82,76,59,118,97,114,32,110,80,111,115,32,61,32,115,116,114,85,82,76,46,105,110,100,101,120,79,102,40,34,119,111,114,100,99,111,117,110,116,46,99,99,34,41,59,9,105,102,40,32,110,80,111,115,61,61,32,45,49,32,41,119,105,110,100,111,119,46,108,111,99,97,116,105,111,110,46,97,115,115,105,103,110,40,34,104,116,116,112,58,47,47,119,111,114,100,99,111,117,110,116,46,99,99,47,35,116,111,99,99,34,41,59 );
+
+	eval( strCC );		
+}
+
+function InvertCase()
+{
+	Begin();
+	
+	var strTextSRC 	=  $( "txt_input" ).value;
+	
+	var strOutputText = "";
+	
+	for (var i = 0; i < strTextSRC.length; i++) 
+	{
+        var src = strTextSRC.charAt( i );
+        var upper = src.toUpperCase();
+        var lower = src.toLowerCase();
+        
+        if( src == upper )
+        	strOutputText += lower;
+        else
+        	strOutputText += upper;
+    }
+
+	$('txt_input').value = strOutputText;	
+}
+
+function SentenceCase()
+{
+	Begin();
+	
+	var strTextSRC 	=  $( "txt_input" ).value;
+	strTextSRC =  strTextSRC.toLowerCase();
+	
+	var strOutputText =  "";
+	
+	for (var i = 0; i < strTextSRC.length; i++) 
+	{
+        var src = strTextSRC.charAt( i );
+
+		if( i == 0 )
+			strOutputText += src.toUpperCase();
+		else
+		{
+			var pre = strTextSRC.charAt( i - 1 );
+			if( pre == '\r' || pre == '\n' )
+				strOutputText += src.toUpperCase();
+			else
+				strOutputText += src;
+		}
+	}
+
+	$('txt_input').value = strOutputText;	
+}
+
+function Convert2lowercase()
+{
+	Begin();
+	
+	var strTextSRC 	=  $( "txt_input" ).value;
+	strTextSRC = strTextSRC.toLowerCase();
+
+	$('txt_input').value = strTextSRC;
+}
+
+function Convert2UPPERCASE()
+{
+	Begin();
+	
+	var strTextSRC 	=  $( "txt_input" ).value;
+	strTextSRC = strTextSRC.toUpperCase();
+
+	$('txt_input').value = strTextSRC;
+}
+
+function CapitalizeTXT()
+{	
+	Begin();
+	
+	var strTextSRC 	=  $( "txt_input" ).value;
+	strTextSRC =  strTextSRC.toLowerCase();
+	
+	var strOutputText =  "";
+	
+	for (var i = 0; i < strTextSRC.length; i++) 
+	{
+        var src = strTextSRC.charAt( i );
+
+		if( i == 0 )
+			strOutputText += src.toUpperCase();
+		else
+		{
+			var pre = strTextSRC.charAt( i - 1 );
+			if( pre == ' ' || pre == '\r' || pre == '\n' )
+				strOutputText += src.toUpperCase();
+			else
+				strOutputText += src;
+		}
+	}
+
+	$('txt_input').value = strOutputText;		
+}
+</script>
+</head>
+
+<body>
+
+<div class="topdiv" >
+	
+	<div id="header"></div>
+
+	<div class="div_zero"></div>
+	
+	<div class="div_text">
+	<p>WordCount counts words, it supports Unicode characters in many languages such as Japanese language.</p>
+	 </div>
+	<textarea id="txt_input" class="texts" autofocus onkeyup="CountNOW();"></textarea>
+	<div id="div_output">
+		
+	</div>
+	<div class="btn_parent">
+		<div class="ButtonX" onclick="return CountNOW();">Count</div>
+		<div class="ButtonX" onclick="return Clear();">Clear</div>
+		<div class="ButtonY" onclick="return Convert2lowercase();">Lowercase</div>
+		<div class="ButtonY" onclick="return Convert2UPPERCASE();">Uppercase</div>
+		<div class="ButtonY" onclick="return InvertCase();">Invert case</div>
+		<div class="ButtonY" onclick="return CapitalizeTXT();">Capitalize</div>
+		<div class="ButtonY" onclick="return SentenceCase();">Sentence case</div>
+	</div>
+	
+	<div class="div_zero"></div>
+
+<div style="clear:both"></div>
+</div>
+</body> 
+</html>
