@@ -58,6 +58,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="arte-color.html" />
+    <Content Include="css\arte.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\styles.css" />
     <Content Include="css\WordCount.css" />

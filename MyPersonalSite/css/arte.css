@@ -1,0 +1,91 @@
+﻿body
+{
+  background-color: black;
+}
+
+.arte
+{
+  background-color: black;
+}
+
+ul#menu
+{
+  padding: 0;
+}
+
+  ul#menu li
+  {
+    display: inline;
+  }
+
+  ul#menu li
+  {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+  }
+
+#title
+{
+  color: white;
+}
+
+#p
+{
+  font-size: 16pt;
+}
+
+#color1
+{
+  font-size: 16pt;
+  color: #fa481c;
+}
+
+#color2
+{
+  font-size: 16pt;
+  color: #f9471b;
+}
+
+#color3
+{
+  font-size: 16pt;
+  color: #f7633f;
+}
+
+#color4
+{
+  font-size: 16pt;
+  color: #ea927c;
+}
+
+#color5
+{
+  font-size: 16pt;
+  color: #1a79ba;
+}
+
+#color6
+{
+  font-size: 16pt;
+  color: #7cb0ff;
+}
+
+#color7
+{
+  font-size: 16pt;
+  color: #5dd2a0;
+}
+
+#color8
+{
+  font-size: 16pt;
+  color: #fd8bc8;
+}
+
+#color9
+{
+  font-size: 16pt;
+  color: #ffffff;
+}
