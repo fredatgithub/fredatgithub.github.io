@@ -2,8 +2,8 @@ solution: MyPersonalSite.sln
 #install:
 # - nuget restore MyPersonalSite.sln
 
-script:
-  - xbuild /p:Configuration=Release MyPersonalSite/MyPersonalSite.csproj
+#script:
+#  - xbuild /p:Configuration=Release MyPersonalSite/MyPersonalSite.csproj
 
 notifications:
   email: false
