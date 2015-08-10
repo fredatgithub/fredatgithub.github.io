@@ -1,7 +1,5 @@
 language: csharp
 solution: MyPersonalSite.sln
-#install:
-# - nuget restore MyPersonalSite.sln
 
 script:
   - xbuild /p:Configuration=Release MyPersonalSite/MyPersonalSite.csproj
